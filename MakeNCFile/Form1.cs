@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -195,14 +196,18 @@ namespace MakeNCFile
         private void btnSave_Click(object sender, EventArgs e)
         {
             saveFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string name = "NCFile_" + DateTime.Now.ToString("yyyymmdd_HHmmss") + ".nc";
+            string name = "NCFile_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".nc";
             saveFileDialog1.FileName = name;
+            saveFileDialog1.AddExtension = true;
+            saveFileDialog1.Filter = "NC파일|*.nc|TXT파일|*.txt";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 //File.WriteAllText(saveFileDialog1.FileName, textBox1.Text.Trim());
                 File.WriteAllText(saveFileDialog1.FileName, richTextBox1.Text.Replace("\n", "\r\n").Trim());
-
+                
                 MessageBox.Show("저장 완료");
+
+                Process.Start("explorer.exe", "/select, \"" + saveFileDialog1.FileName + "\"");
             }
         }
 
