@@ -105,7 +105,7 @@ namespace MakeNCFile
             {
                 foreach (var p in pos_copy)
                 {
-                    if(p != null) kk[p.X, p.Y] = 1;
+                    if (p != null) kk[p.X, p.Y] = 1;
                 }
 
                 pos_copy.Clear();
@@ -204,7 +204,7 @@ namespace MakeNCFile
             {
                 //File.WriteAllText(saveFileDialog1.FileName, textBox1.Text.Trim());
                 File.WriteAllText(saveFileDialog1.FileName, richTextBox1.Text.Replace("\n", "\r\n").Trim());
-                
+
                 MessageBox.Show("저장 완료");
 
                 Process.Start("explorer.exe", "/select, \"" + saveFileDialog1.FileName + "\"");
