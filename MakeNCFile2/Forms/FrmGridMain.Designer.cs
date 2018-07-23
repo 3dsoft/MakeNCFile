@@ -82,7 +82,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(271, 404);
-            this.tabControl1.TabIndex = 4;
+            this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -107,7 +107,7 @@
             this.groupBox2.Location = new System.Drawing.Point(9, 239);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(244, 130);
-            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
             // groupBox1
@@ -128,7 +128,7 @@
             this.groupBox1.Location = new System.Drawing.Point(9, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(244, 236);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // txtMarkGap
@@ -283,7 +283,7 @@
             this.btnConvertToNCFile.Location = new System.Drawing.Point(9, 339);
             this.btnConvertToNCFile.Name = "btnConvertToNCFile";
             this.btnConvertToNCFile.Size = new System.Drawing.Size(134, 32);
-            this.btnConvertToNCFile.TabIndex = 0;
+            this.btnConvertToNCFile.TabIndex = 1;
             this.btnConvertToNCFile.Text = "Convert to NC Code";
             this.btnConvertToNCFile.UseVisualStyleBackColor = true;
             this.btnConvertToNCFile.Click += new System.EventHandler(this.btnSaveToNCFile_Click);
@@ -293,7 +293,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Controls.Add(this.listBox1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
@@ -318,7 +318,7 @@
             this.btnClear.Location = new System.Drawing.Point(34, 98);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(85, 26);
-            this.btnClear.TabIndex = 0;
+            this.btnClear.TabIndex = 4;
             this.btnClear.Text = "Grid Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -328,7 +328,7 @@
             this.btnSave.Location = new System.Drawing.Point(128, 98);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(85, 26);
-            this.btnSave.TabIndex = 6;
+            this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Grid Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -350,7 +350,7 @@
             this.groupBox3.Location = new System.Drawing.Point(6, 13);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(251, 46);
-            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Origin Position";
             // 
@@ -386,7 +386,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(9, 65);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(251, 268);
-            this.richTextBox1.TabIndex = 8;
+            this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             // 
             // btnSaveToNCFile
@@ -395,7 +395,7 @@
             this.btnSaveToNCFile.Location = new System.Drawing.Point(149, 339);
             this.btnSaveToNCFile.Name = "btnSaveToNCFile";
             this.btnSaveToNCFile.Size = new System.Drawing.Size(108, 32);
-            this.btnSaveToNCFile.TabIndex = 9;
+            this.btnSaveToNCFile.TabIndex = 2;
             this.btnSaveToNCFile.Text = "Save to NC File";
             this.btnSaveToNCFile.UseVisualStyleBackColor = true;
             this.btnSaveToNCFile.Click += new System.EventHandler(this.btnSaveToNCFile_Click_1);
@@ -405,7 +405,7 @@
             this.btnGridUP.Location = new System.Drawing.Point(95, 18);
             this.btnGridUP.Name = "btnGridUP";
             this.btnGridUP.Size = new System.Drawing.Size(55, 26);
-            this.btnGridUP.TabIndex = 7;
+            this.btnGridUP.TabIndex = 0;
             this.btnGridUP.Text = "UP";
             this.btnGridUP.UseVisualStyleBackColor = true;
             this.btnGridUP.Click += new System.EventHandler(this.btnGridControl_Click);
@@ -415,7 +415,7 @@
             this.btnGridDown.Location = new System.Drawing.Point(96, 54);
             this.btnGridDown.Name = "btnGridDown";
             this.btnGridDown.Size = new System.Drawing.Size(55, 26);
-            this.btnGridDown.TabIndex = 8;
+            this.btnGridDown.TabIndex = 3;
             this.btnGridDown.Text = "DOWN";
             this.btnGridDown.UseVisualStyleBackColor = true;
             this.btnGridDown.Click += new System.EventHandler(this.btnGridControl_Click);
@@ -425,7 +425,7 @@
             this.btnGridLeft.Location = new System.Drawing.Point(35, 35);
             this.btnGridLeft.Name = "btnGridLeft";
             this.btnGridLeft.Size = new System.Drawing.Size(55, 26);
-            this.btnGridLeft.TabIndex = 9;
+            this.btnGridLeft.TabIndex = 1;
             this.btnGridLeft.Text = "LEFT";
             this.btnGridLeft.UseVisualStyleBackColor = true;
             this.btnGridLeft.Click += new System.EventHandler(this.btnGridControl_Click);
@@ -435,7 +435,7 @@
             this.btnGridRight.Location = new System.Drawing.Point(156, 35);
             this.btnGridRight.Name = "btnGridRight";
             this.btnGridRight.Size = new System.Drawing.Size(55, 26);
-            this.btnGridRight.TabIndex = 10;
+            this.btnGridRight.TabIndex = 2;
             this.btnGridRight.Text = "RIGHT";
             this.btnGridRight.UseVisualStyleBackColor = true;
             this.btnGridRight.Click += new System.EventHandler(this.btnGridControl_Click);
