@@ -47,18 +47,29 @@
             this.txtSizeWidth = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConvertToNCFile = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rdLeftTop = new System.Windows.Forms.RadioButton();
+            this.rdLeftBottom = new System.Windows.Forms.RadioButton();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.btnSaveToNCFile = new System.Windows.Forms.Button();
+            this.btnGridUP = new System.Windows.Forms.Button();
+            this.btnGridDown = new System.Windows.Forms.Button();
+            this.btnGridLeft = new System.Windows.Forms.Button();
+            this.btnGridRight = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -70,7 +81,7 @@
             this.tabControl1.Location = new System.Drawing.Point(418, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(313, 436);
+            this.tabControl1.Size = new System.Drawing.Size(271, 404);
             this.tabControl1.TabIndex = 4;
             // 
             // tabPage1
@@ -80,23 +91,28 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(305, 410);
+            this.tabPage1.Size = new System.Drawing.Size(263, 378);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Set";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(9, 261);
+            this.groupBox2.Controls.Add(this.btnGridRight);
+            this.groupBox2.Controls.Add(this.btnGridLeft);
+            this.groupBox2.Controls.Add(this.btnGridDown);
+            this.groupBox2.Controls.Add(this.btnGridUP);
+            this.groupBox2.Controls.Add(this.btnSave);
+            this.groupBox2.Controls.Add(this.btnClear);
+            this.groupBox2.Location = new System.Drawing.Point(9, 239);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 100);
+            this.groupBox2.Size = new System.Drawing.Size(244, 130);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtMarkGap);
-            this.groupBox1.Controls.Add(this.listBox1);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.rdMarkCircle);
@@ -111,7 +127,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(9, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(199, 253);
+            this.groupBox1.Size = new System.Drawing.Size(244, 236);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
@@ -129,10 +145,11 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.HorizontalScrollbar = true;
             this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(6, 231);
+            this.listBox1.Location = new System.Drawing.Point(12, 419);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(200, 16);
+            this.listBox1.Size = new System.Drawing.Size(205, 16);
             this.listBox1.TabIndex = 1;
+            this.listBox1.Visible = false;
             // 
             // label6
             // 
@@ -196,7 +213,7 @@
             this.txtSizeHeight.ReadOnly = true;
             this.txtSizeHeight.Size = new System.Drawing.Size(50, 21);
             this.txtSizeHeight.TabIndex = 2;
-            this.txtSizeHeight.Text = "500";
+            this.txtSizeHeight.Text = "30";
             this.txtSizeHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
@@ -220,7 +237,7 @@
             // 
             // btnSet
             // 
-            this.btnSet.Location = new System.Drawing.Point(67, 190);
+            this.btnSet.Location = new System.Drawing.Point(67, 186);
             this.btnSet.Name = "btnSet";
             this.btnSet.Size = new System.Drawing.Size(118, 35);
             this.btnSet.TabIndex = 6;
@@ -235,7 +252,7 @@
             this.txtSizeWidth.ReadOnly = true;
             this.txtSizeWidth.Size = new System.Drawing.Size(50, 21);
             this.txtSizeWidth.TabIndex = 1;
-            this.txtSizeWidth.Text = "600";
+            this.txtSizeWidth.Text = "30";
             this.txtSizeWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
@@ -249,31 +266,36 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.btnSaveToNCFile);
+            this.tabPage2.Controls.Add(this.richTextBox1);
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Controls.Add(this.btnConvertToNCFile);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(305, 410);
+            this.tabPage2.Size = new System.Drawing.Size(263, 378);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "NC Code";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnConvertToNCFile
             // 
-            this.button1.Location = new System.Drawing.Point(210, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnConvertToNCFile.Location = new System.Drawing.Point(9, 339);
+            this.btnConvertToNCFile.Name = "btnConvertToNCFile";
+            this.btnConvertToNCFile.Size = new System.Drawing.Size(134, 32);
+            this.btnConvertToNCFile.TabIndex = 0;
+            this.btnConvertToNCFile.Text = "Convert to NC Code";
+            this.btnConvertToNCFile.UseVisualStyleBackColor = true;
+            this.btnConvertToNCFile.Click += new System.EventHandler(this.btnSaveToNCFile_Click);
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panel1.Location = new System.Drawing.Point(12, 47);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.listBox1);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(400, 400);
             this.panel1.TabIndex = 3;
@@ -285,41 +307,31 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 460);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(743, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(701, 22);
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(83, 12);
+            this.btnClear.Location = new System.Drawing.Point(34, 98);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(65, 26);
+            this.btnClear.Size = new System.Drawing.Size(85, 26);
             this.btnClear.TabIndex = 0;
-            this.btnClear.Text = "Clear";
+            this.btnClear.Text = "Grid Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(12, 12);
+            this.btnSave.Location = new System.Drawing.Point(128, 98);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(65, 26);
+            this.btnSave.Size = new System.Drawing.Size(85, 26);
             this.btnSave.TabIndex = 6;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Grid Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(234, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(65, 26);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Load";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // openFileDialog1
             // 
@@ -331,14 +343,108 @@
             this.saveFileDialog1.Filter = "S파일|*.s";
             this.saveFileDialog1.Title = "S 파일";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.rdLeftBottom);
+            this.groupBox3.Controls.Add(this.rdLeftTop);
+            this.groupBox3.Location = new System.Drawing.Point(6, 13);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(251, 46);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Origin Position";
+            // 
+            // rdLeftTop
+            // 
+            this.rdLeftTop.AutoSize = true;
+            this.rdLeftTop.Location = new System.Drawing.Point(23, 20);
+            this.rdLeftTop.Name = "rdLeftTop";
+            this.rdLeftTop.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rdLeftTop.Size = new System.Drawing.Size(71, 16);
+            this.rdLeftTop.TabIndex = 0;
+            this.rdLeftTop.Text = "Left-Top";
+            this.rdLeftTop.UseVisualStyleBackColor = true;
+            // 
+            // rdLeftBottom
+            // 
+            this.rdLeftBottom.AutoSize = true;
+            this.rdLeftBottom.Checked = true;
+            this.rdLeftBottom.Location = new System.Drawing.Point(138, 20);
+            this.rdLeftBottom.Name = "rdLeftBottom";
+            this.rdLeftBottom.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rdLeftBottom.Size = new System.Drawing.Size(88, 16);
+            this.rdLeftBottom.TabIndex = 1;
+            this.rdLeftBottom.TabStop = true;
+            this.rdLeftBottom.Text = "Left-Bottom";
+            this.rdLeftBottom.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox1.Location = new System.Drawing.Point(9, 65);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(251, 268);
+            this.richTextBox1.TabIndex = 8;
+            this.richTextBox1.Text = "";
+            // 
+            // btnSaveToNCFile
+            // 
+            this.btnSaveToNCFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveToNCFile.Location = new System.Drawing.Point(149, 339);
+            this.btnSaveToNCFile.Name = "btnSaveToNCFile";
+            this.btnSaveToNCFile.Size = new System.Drawing.Size(108, 32);
+            this.btnSaveToNCFile.TabIndex = 9;
+            this.btnSaveToNCFile.Text = "Save to NC File";
+            this.btnSaveToNCFile.UseVisualStyleBackColor = true;
+            this.btnSaveToNCFile.Click += new System.EventHandler(this.btnSaveToNCFile_Click_1);
+            // 
+            // btnGridUP
+            // 
+            this.btnGridUP.Location = new System.Drawing.Point(95, 18);
+            this.btnGridUP.Name = "btnGridUP";
+            this.btnGridUP.Size = new System.Drawing.Size(55, 26);
+            this.btnGridUP.TabIndex = 7;
+            this.btnGridUP.Text = "UP";
+            this.btnGridUP.UseVisualStyleBackColor = true;
+            this.btnGridUP.Click += new System.EventHandler(this.btnGridControl_Click);
+            // 
+            // btnGridDown
+            // 
+            this.btnGridDown.Location = new System.Drawing.Point(96, 54);
+            this.btnGridDown.Name = "btnGridDown";
+            this.btnGridDown.Size = new System.Drawing.Size(55, 26);
+            this.btnGridDown.TabIndex = 8;
+            this.btnGridDown.Text = "DOWN";
+            this.btnGridDown.UseVisualStyleBackColor = true;
+            this.btnGridDown.Click += new System.EventHandler(this.btnGridControl_Click);
+            // 
+            // btnGridLeft
+            // 
+            this.btnGridLeft.Location = new System.Drawing.Point(35, 35);
+            this.btnGridLeft.Name = "btnGridLeft";
+            this.btnGridLeft.Size = new System.Drawing.Size(55, 26);
+            this.btnGridLeft.TabIndex = 9;
+            this.btnGridLeft.Text = "LEFT";
+            this.btnGridLeft.UseVisualStyleBackColor = true;
+            this.btnGridLeft.Click += new System.EventHandler(this.btnGridControl_Click);
+            // 
+            // btnGridRight
+            // 
+            this.btnGridRight.Location = new System.Drawing.Point(156, 35);
+            this.btnGridRight.Name = "btnGridRight";
+            this.btnGridRight.Size = new System.Drawing.Size(55, 26);
+            this.btnGridRight.TabIndex = 10;
+            this.btnGridRight.Text = "RIGHT";
+            this.btnGridRight.UseVisualStyleBackColor = true;
+            this.btnGridRight.Click += new System.EventHandler(this.btnGridControl_Click);
+            // 
             // FrmGridMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 482);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnClear);
+            this.ClientSize = new System.Drawing.Size(701, 450);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
@@ -348,9 +454,13 @@
             this.Load += new System.EventHandler(this.FrmGridMain_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,11 +489,19 @@
         private System.Windows.Forms.TextBox txtSizeWidth;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConvertToNCFile;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton rdLeftBottom;
+        private System.Windows.Forms.RadioButton rdLeftTop;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button btnSaveToNCFile;
+        private System.Windows.Forms.Button btnGridUP;
+        private System.Windows.Forms.Button btnGridRight;
+        private System.Windows.Forms.Button btnGridLeft;
+        private System.Windows.Forms.Button btnGridDown;
     }
 }

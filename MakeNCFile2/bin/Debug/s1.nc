@@ -1,0 +1,6 @@
+YouGar Mode File - YHWH
+G11 X0  Y0
+G11 X0  Y29
+G11 X29  Y0
+G11 X29  Y29
+M02

@@ -16,8 +16,6 @@ namespace MakeNCFile2
 {
     public partial class Form1 : Form
     {
-        
-
         public Form1()
         {
             InitializeComponent();
@@ -50,6 +48,7 @@ namespace MakeNCFile2
             }
         }
 
+        // Load
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -67,6 +66,8 @@ namespace MakeNCFile2
                     fs.Seek(0, SeekOrigin.Begin);
                     pi2.matrix = new int[pi.pnSize.Width, pi.pnSize.Height];
                     pi2 = (PanelInfo)bf.Deserialize(fs);
+
+                    pi2.pnFileName = openFileDialog1.FileName;
 
                     FrmGridMain mm = new FrmGridMain();
                     mm.pi = pi2;

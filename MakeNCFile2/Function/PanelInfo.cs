@@ -30,8 +30,8 @@ namespace MakeNCFile2.Function
             {
                 X = 0,
                 Y = 0,
-                Width = 30,
-                Height = 30
+                Width = 10,
+                Height = 10
             };
             pnGridLineColor = Color.Black;
             pnMarkColor = Color.Blue;
