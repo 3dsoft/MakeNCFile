@@ -63,6 +63,16 @@
             this.btnGridDown = new System.Windows.Forms.Button();
             this.btnGridLeft = new System.Windows.Forms.Button();
             this.btnGridRight = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.btnDelCode = new System.Windows.Forms.Button();
+            this.txtDelCode = new System.Windows.Forms.TextBox();
+            this.txtAddCode = new System.Windows.Forms.TextBox();
+            this.btnAddCode = new System.Windows.Forms.Button();
+            this.txtReplace1 = new System.Windows.Forms.TextBox();
+            this.btnReplaceCode = new System.Windows.Forms.Button();
+            this.txtReplace2 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -70,6 +80,7 @@
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -78,6 +89,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(418, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -383,7 +395,7 @@
             this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(9, 65);
+            this.richTextBox1.Location = new System.Drawing.Point(6, 65);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(251, 268);
             this.richTextBox1.TabIndex = 3;
@@ -440,6 +452,105 @@
             this.btnGridRight.UseVisualStyleBackColor = true;
             this.btnGridRight.Click += new System.EventHandler(this.btnGridControl_Click);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.label7);
+            this.tabPage3.Controls.Add(this.txtReplace2);
+            this.tabPage3.Controls.Add(this.txtReplace1);
+            this.tabPage3.Controls.Add(this.btnReplaceCode);
+            this.tabPage3.Controls.Add(this.txtAddCode);
+            this.tabPage3.Controls.Add(this.btnAddCode);
+            this.tabPage3.Controls.Add(this.txtDelCode);
+            this.tabPage3.Controls.Add(this.btnDelCode);
+            this.tabPage3.Controls.Add(this.richTextBox2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(263, 378);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Edit";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox2.Location = new System.Drawing.Point(6, 6);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(251, 274);
+            this.richTextBox2.TabIndex = 0;
+            this.richTextBox2.Text = "";
+            // 
+            // btnDelCode
+            // 
+            this.btnDelCode.Location = new System.Drawing.Point(174, 288);
+            this.btnDelCode.Name = "btnDelCode";
+            this.btnDelCode.Size = new System.Drawing.Size(75, 23);
+            this.btnDelCode.TabIndex = 2;
+            this.btnDelCode.Text = "Del";
+            this.btnDelCode.UseVisualStyleBackColor = true;
+            this.btnDelCode.Click += new System.EventHandler(this.btnDelCode_Click);
+            // 
+            // txtDelCode
+            // 
+            this.txtDelCode.Location = new System.Drawing.Point(12, 289);
+            this.txtDelCode.Name = "txtDelCode";
+            this.txtDelCode.Size = new System.Drawing.Size(156, 21);
+            this.txtDelCode.TabIndex = 1;
+            this.txtDelCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtAddCode
+            // 
+            this.txtAddCode.Location = new System.Drawing.Point(12, 318);
+            this.txtAddCode.Name = "txtAddCode";
+            this.txtAddCode.Size = new System.Drawing.Size(156, 21);
+            this.txtAddCode.TabIndex = 3;
+            this.txtAddCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnAddCode
+            // 
+            this.btnAddCode.Location = new System.Drawing.Point(174, 317);
+            this.btnAddCode.Name = "btnAddCode";
+            this.btnAddCode.Size = new System.Drawing.Size(75, 23);
+            this.btnAddCode.TabIndex = 4;
+            this.btnAddCode.Text = "Add";
+            this.btnAddCode.UseVisualStyleBackColor = true;
+            this.btnAddCode.Click += new System.EventHandler(this.btnAddCode_Click);
+            // 
+            // txtReplace1
+            // 
+            this.txtReplace1.Location = new System.Drawing.Point(12, 347);
+            this.txtReplace1.Name = "txtReplace1";
+            this.txtReplace1.Size = new System.Drawing.Size(67, 21);
+            this.txtReplace1.TabIndex = 5;
+            this.txtReplace1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnReplaceCode
+            // 
+            this.btnReplaceCode.Location = new System.Drawing.Point(174, 346);
+            this.btnReplaceCode.Name = "btnReplaceCode";
+            this.btnReplaceCode.Size = new System.Drawing.Size(75, 23);
+            this.btnReplaceCode.TabIndex = 7;
+            this.btnReplaceCode.Text = "Replace";
+            this.btnReplaceCode.UseVisualStyleBackColor = true;
+            this.btnReplaceCode.Click += new System.EventHandler(this.btnReplaceCode_Click);
+            // 
+            // txtReplace2
+            // 
+            this.txtReplace2.Location = new System.Drawing.Point(101, 347);
+            this.txtReplace2.Name = "txtReplace2";
+            this.txtReplace2.Size = new System.Drawing.Size(67, 21);
+            this.txtReplace2.TabIndex = 6;
+            this.txtReplace2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(81, 352);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(19, 12);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "->";
+            // 
             // FrmGridMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -461,6 +572,8 @@
             this.panel1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -503,5 +616,15 @@
         private System.Windows.Forms.Button btnGridRight;
         private System.Windows.Forms.Button btnGridLeft;
         private System.Windows.Forms.Button btnGridDown;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.TextBox txtDelCode;
+        private System.Windows.Forms.Button btnDelCode;
+        private System.Windows.Forms.TextBox txtAddCode;
+        private System.Windows.Forms.Button btnAddCode;
+        private System.Windows.Forms.TextBox txtReplace2;
+        private System.Windows.Forms.TextBox txtReplace1;
+        private System.Windows.Forms.Button btnReplaceCode;
+        private System.Windows.Forms.Label label7;
     }
 }

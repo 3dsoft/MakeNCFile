@@ -1,15 +1,10 @@
 ﻿using MakeNCFile2.Function;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MakeNCFile2.Forms
@@ -223,12 +218,14 @@ namespace MakeNCFile2.Forms
                 {
                     for (int y = pi.matrix.GetLength(1) - 1; y >= 0; y--)
                     {
-                        if (pi.matrix[x, y] == 1) richTextBox1.Text += "G11 X" + (x * pi.pnGridGap).ToString() + "  Y" + ((pi.matrix.GetLength(1) - y - 1) * pi.pnGridGap).ToString() + "\r\n";
+                        if (pi.matrix[x, y] == 1) richTextBox1.Text += "G11  X" + (x * pi.pnGridGap).ToString() + "  Y" + ((pi.matrix.GetLength(1) - y - 1) * pi.pnGridGap).ToString() + "\r\n";
                     }
                 }
             }
 
             richTextBox1.Text += "M02\r\n";
+
+            richTextBox2.Text = richTextBox1.Text;
         }
 
         private void btnSaveToNCFile_Click_1(object sender, EventArgs e)
@@ -252,7 +249,7 @@ namespace MakeNCFile2.Forms
         {
             Button btn = sender as Button;
 
-            btn.Enabled = false;
+            btnGridUP.Enabled = btnGridDown.Enabled = btnGridLeft.Enabled = btnGridRight.Enabled = false;
 
             if (btn.Text == "LEFT")
             {
@@ -308,7 +305,51 @@ namespace MakeNCFile2.Forms
 
             panel1_Paint(null, null);
 
-            btn.Enabled = true;
+            btnGridUP.Enabled = btnGridDown.Enabled = btnGridLeft.Enabled = btnGridRight.Enabled = true;
+        }
+
+        private void btnDelCode_Click(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (string s in richTextBox2.Lines)
+            {
+                if (s.Trim() != string.Empty && s.ToLower().IndexOf("yougar") == -1)
+                {
+                    sb.AppendLine(s.Replace(txtDelCode.Text.Trim(), ""));
+                }
+                else sb.AppendLine(s.Trim());
+            }
+
+            richTextBox2.Text = sb.ToString();
+        }
+
+        private void btnAddCode_Click(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (string s in richTextBox2.Lines)
+            {
+                if (s.Trim() != string.Empty && s.ToLower().IndexOf("yougar") == -1)
+                {
+                    sb.AppendLine(s.Trim() + "  " + txtAddCode.Text.Trim());
+                }
+                else sb.AppendLine(s.Trim());
+            }
+            richTextBox2.Text = sb.ToString();
+        }
+
+        private void btnReplaceCode_Click(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (string s in richTextBox2.Lines)
+            {
+                if (s.Trim() != string.Empty && s.ToLower().IndexOf("yougar") == -1)
+                {
+                    sb.AppendLine(s.Replace(txtReplace1.Text.Trim(), txtReplace2.Text.Trim()));
+                }
+                else sb.AppendLine(s.Trim());
+            }
+
+            richTextBox2.Text = sb.ToString();
         }
     }
 }
